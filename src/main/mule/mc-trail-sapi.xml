@@ -110,7 +110,7 @@ output application/json
 {
   success: true,
   statusCode: 201,
-  correlationId: correlationId,
+  correlationId: "1234",
   result: {
     id: 12345,
     name: "John Doe",
