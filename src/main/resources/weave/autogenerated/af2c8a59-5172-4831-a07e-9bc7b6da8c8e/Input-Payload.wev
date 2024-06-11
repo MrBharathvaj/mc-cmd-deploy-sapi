@@ -1,0 +1,16 @@
+%dw 2.0
+
+type auto_af2c8a59_5172_4831_a07e_9bc7b6da8c8e_Input_Payload = {|
+  success: Boolean, 
+  statusCode: Number, 
+  correlationId: String, 
+  result: {|
+    id: Number, 
+    name: String, 
+    department: String, 
+    position: String, 
+    salary: Number
+  |}
+|} {"mediaType": "application/json",
+"encoding": "UTF-8"}
+

@@ -99,8 +99,19 @@ output application/json
     <flow name="post:\employee:application\json:mc-trail-sapi-config">
         <logger level="INFO" doc:name="Start Flow" doc:id="9afe0b3e-32bd-4fbd-a530-1d3f635fbf11" message="Flow Started in ++ #[flow.name]"/>
 		<flow-ref doc:name="Calling Subflow" doc:id="3475718d-0629-4fa5-898c-8337aace4feb" name="mc-trail-sapiSub_Flow"/>
+		<flow-ref doc:name="Flow Reference" doc:id="3ec6e0b7-c84e-4200-8a3f-c06e0ef4f8db" name="mc-trail-sapiSub_Flow1"/>
 		<logger level="INFO" doc:name="Flow End" doc:id="ad4ad386-64ee-48ad-bc0a-0b61f7c44d8c" message="Flow Ended in ++ #[flow.name]"/>
     </flow>
+	<sub-flow name="mc-trail-sapiSub_Flow1" doc:id="af2c8a59-5172-4831-a07e-9bc7b6da8c8e" >
+		<ee:transform doc:name="Transform Message" doc:id="f70d5f6e-416e-4e1a-8429-a5a20a50be98" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</sub-flow>
 	<sub-flow name="mc-trail-sapiSub_Flow" doc:id="64f29c1d-7149-4545-9e22-0b777d44566c" >
 		<ee:transform doc:name="Transform Message">
             <ee:message>
