@@ -98,7 +98,7 @@ output application/json
     </flow>
     <flow name="post:\employee:application\json:mc-trail-sapi-config">
         <logger level="INFO" doc:name="Start Flow" doc:id="9afe0b3e-32bd-4fbd-a530-1d3f635fbf11" message="Flow Started in ++ #[flow.name]"/>
-		<flow-ref doc:name="Flow Reference" doc:id="3475718d-0629-4fa5-898c-8337aace4feb" name="mc-trail-sapiSub_Flow"/>
+		<flow-ref doc:name="Calling Subflow" doc:id="3475718d-0629-4fa5-898c-8337aace4feb" name="mc-trail-sapiSub_Flow"/>
 		<logger level="INFO" doc:name="Flow End" doc:id="ad4ad386-64ee-48ad-bc0a-0b61f7c44d8c" message="Flow Ended in ++ #[flow.name]"/>
     </flow>
 	<sub-flow name="mc-trail-sapiSub_Flow" doc:id="64f29c1d-7149-4545-9e22-0b777d44566c" >
@@ -110,7 +110,7 @@ output application/json
 {
   success: true,
   statusCode: 201,
-  correlationId: "8758uygc",
+  correlationId: correlationId,
   result: {
     id: 12345,
     name: "John Doe",
