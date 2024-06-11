@@ -118,6 +118,6 @@ output application/json
 } as Object {encoding: "UTF-8", mediaType: "application/json"}]]></ee:set-payload>
             </ee:message>
         </ee:transform>
-		<logger level="INFO" doc:name="End Flow" doc:id="ad4ad386-64ee-48ad-bc0a-0b61f7c44d8c" message="Flow Ended in ++ #[flow.name]"/>
+		<logger level="INFO" doc:name="Flow End" doc:id="ad4ad386-64ee-48ad-bc0a-0b61f7c44d8c" message="Flow Ended in ++ #[flow.name]"/>
     </flow>
 </mule>
