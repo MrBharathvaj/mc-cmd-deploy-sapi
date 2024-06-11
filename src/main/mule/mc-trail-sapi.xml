@@ -111,7 +111,6 @@ output application/json
   success: true,
   statusCode: 201,
   correlationId: "8758uygc",
-  typeOfResponse: "created successfully",
   result: {
     id: 12345,
     name: "John Doe",
